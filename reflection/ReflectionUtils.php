@@ -5,16 +5,28 @@
  */
 class ReflectionUtils
 {
+    /**
+     * @param ReflectionClass $class
+     * @return bool|string
+     */
     static function getClassSource(ReflectionClass $class)
     {
         return self::getSource($class);
     }
 
+    /**
+     * @param ReflectionMethod $method
+     * @return bool|string
+     */
     static function getMethodSource(ReflectionMethod $method)
     {
         return self::getSource($method);
     }
 
+    /**
+     * @param Reflector $reflector
+     * @return bool|string
+     */
     protected static function getSource(Reflector $reflector)
     {
         $path = $reflector->getFileName();
