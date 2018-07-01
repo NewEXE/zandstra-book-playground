@@ -1,0 +1,12 @@
+# Redirect all requests to /index.php
+
+<IfModule mod_rewrite.c>
+    AddDefaultCharset utf-8
+
+    Options +FollowSymLinks
+    RewriteEngine on
+    RewriteBase /
+
+    RewriteCond %{REQUEST_URI} !=/index.php
+    RewriteRule .* /index.php [L,QSA]
+</IfModule>

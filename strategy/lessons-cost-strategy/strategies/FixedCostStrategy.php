@@ -6,6 +6,8 @@
  * Time: 16:54
  */
 
+namespace strategy\lessons_cost_strategy\strategies;
+use strategy\lessons_cost_strategy\lesson_types\Lesson;
 /**
  * Class FixedCostStrategy
  */

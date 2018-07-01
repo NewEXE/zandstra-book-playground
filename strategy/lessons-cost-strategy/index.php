@@ -6,7 +6,13 @@
  * Time: 16:10
  */
 
-require_once '../../autoloader.php';
+namespace strategy\lessons_cost_strategy;
+
+use strategy\lessons_cost_strategy\lesson_types\Lecture;
+use strategy\lessons_cost_strategy\lesson_types\Lesson;
+use strategy\lessons_cost_strategy\lesson_types\Seminar;
+use strategy\lessons_cost_strategy\strategies\TimedCostStrategy;
+use strategy\lessons_cost_strategy\strategies\FixedCostStrategy;
 
 /** @var Lesson[] $lessons */
 $lessons = [];

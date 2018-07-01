@@ -6,6 +6,13 @@
  * Time: 16:51
  */
 
+namespace strategy\lessons_cost_strategy\strategies;
+use strategy\lessons_cost_strategy\lesson_types\Lesson;
+
+/**
+ * Class TimedCostStrategy
+ * @package strategy\lessons_cost_strategy\strategies
+ */
 class TimedCostStrategy extends CostStrategy
 {
     /**

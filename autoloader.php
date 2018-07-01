@@ -6,15 +6,44 @@
  * Time: 21:55
  */
 
-/*
+/**
+ * Find needed file by namespace of class.
+ * Char '_' in namespace will be converted to '-'.
+ *
+ * @param $className
+ */
+function namespaceAutoload($className)
+{
+    if (preg_match('/\\\\/', $className)) {
+
+        $className = str_replace('\\', DIRECTORY_SEPARATOR, $className);
+
+        $path = "{$className}.php";
+
+        $path = str_replace('_', '-', $path);
+
+        $path = ROOT . '/' . $path;
+
+        if (file_exists($path)) {
+            require_once $path;
+        }
+    }
+}
+
+/**
  * Walk through all PHP files in project
  * until the needed file is found
+ *
+ * @param $className
  */
-spl_autoload_register(function ($className) {
-    $requiredFileName = "$className.php";
+function allFilesWalkerAutoload($className)
+{
+    $explodedClassName = explode('\\', $className);
+    $requiredFileName = end($explodedClassName) . '.php';
+    unset($explodedClassName);
 
     $dir = new RecursiveIteratorIterator(
-        new RecursiveDirectoryIterator(__DIR__, FilesystemIterator::SKIP_DOTS),
+        new RecursiveDirectoryIterator(ROOT, FilesystemIterator::SKIP_DOTS),
         true);
 
     /** @var SplFileInfo $file */
@@ -32,4 +61,7 @@ spl_autoload_register(function ($className) {
             break;
         }
     }
-});
+}
+
+spl_autoload_register('namespaceAutoload');
+spl_autoload_register('allFilesWalkerAutoload');

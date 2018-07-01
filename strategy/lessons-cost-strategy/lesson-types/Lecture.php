@@ -6,6 +6,8 @@
  * Time: 16:15
  */
 
+namespace strategy\lessons_cost_strategy\lesson_types;
+
 /**
  * Class Lecture
  */
