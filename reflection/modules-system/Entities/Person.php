@@ -14,7 +14,7 @@ class Person
     /**
      * @var string
      */
-    public $name;
+    protected $name;
 
     /**
      * Person constructor.

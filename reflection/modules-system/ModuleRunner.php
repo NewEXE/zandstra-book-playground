@@ -13,7 +13,7 @@
 class ModuleRunner
 {
     /**
-     * @var array Array of registered modules
+     * @var Module[] Array of registered modules
      */
     protected $modules = [];
 
@@ -40,7 +40,8 @@ class ModuleRunner
     /**
      * @return void
      */
-    public function run() {
+    public function run()
+    {
         foreach ($this->modules as $module) {
             $module->execute();
         }

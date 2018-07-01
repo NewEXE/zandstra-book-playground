@@ -1,6 +1,6 @@
 <?php
 
-require_once 'ReflectionUtils.php';
+require_once '../../autoloader.php';
 
 /**
  * Class Test
