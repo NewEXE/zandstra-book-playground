@@ -6,6 +6,9 @@
  * Time: 23:01
  */
 
+use reflection\modules_system\Modules\PersonModule;
+use reflection\modules_system\Modules\FtpModule;
+
 return [
     PersonModule::class => [
         'person' => 'Valera'

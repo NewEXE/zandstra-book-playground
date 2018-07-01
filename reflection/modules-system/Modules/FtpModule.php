@@ -6,6 +6,8 @@
  * Time: 20:36
  */
 
+namespace reflection\modules_system\Modules;
+
 class FtpModule implements Module
 {
     /**

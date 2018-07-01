@@ -6,6 +6,8 @@
  * Time: 20:32
  */
 
+namespace reflection\modules_system\Entities;
+
 /**
  * Class Person
  */

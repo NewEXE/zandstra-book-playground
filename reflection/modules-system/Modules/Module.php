@@ -6,6 +6,8 @@
  * Time: 20:33
  */
 
+namespace reflection\modules_system\Modules;
+
 /**
  * Interface Module
  *

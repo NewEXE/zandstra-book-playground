@@ -6,6 +6,13 @@
  * Time: 20:36
  */
 
+namespace reflection\modules_system\Modules;
+use reflection\modules_system\Entities\Person;
+
+/**
+ * Class PersonModule
+ * @package reflection\modules_system\Modules
+ */
 class PersonModule implements Module
 {
     /**

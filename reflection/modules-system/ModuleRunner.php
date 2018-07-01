@@ -6,6 +6,11 @@
  * Time: 20:43
  */
 
+namespace reflection\modules_system;
+use reflection\modules_system\Modules\Module;
+use \ReflectionClass;
+use \ReflectionMethod;
+use \Exception;
 
 /**
  * Class ModuleRunner
@@ -24,7 +29,7 @@ class ModuleRunner
 
     /**
      * ModuleRunner constructor.
-     * @throws ReflectionException
+     * @throws \ReflectionException
      */
     public function __construct()
     {
@@ -48,7 +53,8 @@ class ModuleRunner
     }
 
     /**
-     * @throws ReflectionException
+     * @throws \ReflectionException
+     * @throws Exception
      */
     protected function init()
     {
@@ -61,6 +67,7 @@ class ModuleRunner
                 throw new Exception('Unknown module type: ' . $moduleName);
             }
 
+            /** @var Module $module */
             $module = $moduleClass->newInstance();
             $moduleMethods = $moduleClass->getMethods();
 

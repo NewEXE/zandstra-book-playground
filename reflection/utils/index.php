@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../autoloader.php';
+use reflection\utils\ReflectionUtils;
 
 /**
  * Class Test
@@ -27,4 +27,5 @@ echo ReflectionUtils::getClassSource($rClass);
 foreach ($rMethods as $method) {
     echo ReflectionUtils::getMethodSource($method);
 }
+
 echo '</pre>';

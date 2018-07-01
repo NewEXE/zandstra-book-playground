@@ -6,7 +6,7 @@
  * Time: 21:18
  */
 
-require_once '../../autoloader.php';
+use reflection\modules_system\ModuleRunner;
 
 $runner = new ModuleRunner();
 $runner->run();

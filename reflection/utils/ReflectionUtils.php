@@ -1,5 +1,10 @@
 <?php
 
+namespace reflection\utils;
+use \ReflectionClass;
+use \ReflectionMethod;
+use \Reflector;
+
 /**
  * Class ReflectionUtils
  */
