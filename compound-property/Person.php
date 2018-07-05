@@ -68,6 +68,14 @@ class Person
     }
 
     /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->fullname;
+    }
+
+    /**
      * @param $maybeFullname
      * @return array|bool
      */
@@ -88,7 +96,8 @@ class Person
     /**
      * @return string
      */
-    private function implodeFullname() {
+    private function implodeFullname()
+    {
         $exploded = [
             $this->firstname,
             $this->lastname
@@ -99,6 +108,9 @@ class Person
         return $imploded;
     }
 
+    /**
+     * @return string
+     */
     private function getFullnameSeparator() {
         return ' ';
     }
